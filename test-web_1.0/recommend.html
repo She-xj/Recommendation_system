@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation</title>
+    <link rel="stylesheet" type="text/css" href="css/recom.css">
+</head>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script type="text/javascript">
+    /*前后端交互后需要确认是否实现功能（可能要刷新页面？）*/
+
+    jQuery(document).ready(function(){
+        jQuery('.rating').click(function(){
+            jQuery('.dia').css("opacity",1);
+
+            jQuery('.ok').attr('disabled',false);
+        })
+        jQuery('.ok').click(function(){
+            jQuery('.dia_2').css("opacity",1);
+
+
+        })
+
+
+        /*getid 点击后ajax*/
+        /*ok 点击后ajax*/
+    })
+
+
+</script>
+
+
+
+
+<body>
+          <div class="container">
+              <div class="section">
+
+                  <div class="box">
+                      <div class="section_left">
+                          <div class="top">
+                              <div>
+                                  <div class="text_small">FUNCTIONS AVALIABLE:</div><br>
+                                  <input class="btn rating" type="submit" value="Rate Books" ><br><br>
+                                  <input class="btn rating" type="submit" value="Get Recommendations" ><br><br>
+                                  <input class="btn" type="submit" value="Logout" ><br><br>
+                              </div>
+                          </div>
+
+                          <div class="btm dia">
+
+                              <div class="text_small">SEARCH BY KEY:</div>
+                              <hr>
+                              <form>
+                                  <table class="text" >
+                                      <tr>
+                                          <td> <input type="radio" name="method" value="ISBN" checked="true"></td>
+                                          <td>BOOK ISBN</td>
+                                      </tr>
+                                  </table>
+
+                                  <input class="input_field" type="string" name="ISBN"><input class="sub ok" type="submit" value="OK" >
+
+                              </form>
+
+
+                          </div>
+
+                      </div>
+
+                      <div class="section_right dia_2">
+                          <div class="text_small">SEARCH RESULTS:</div>
+                          <div><hr></div>
+
+                          <div class="show">
+                              <div >
+                                  <img src="img/book_2.png" width="100%" height="100%">
+                              </div>
+
+                                  <table>
+                                      <tr>
+                                          <td><p class="word">Isbn:</p></td>
+                                          <td><output name=""></output></td>
+                                      </tr>
+                                      <tr>
+                                          <td> <p class="word">Publisher:</p> </td>
+                                          <td><output name=""></output></td>
+                                      </tr>
+                                      <tr>
+                                          <td><p class="word">Year of publishing:</p></td>
+                                          <td><output name=""></output></td>
+                                      </tr>
+
+                                  </table>
+
+                          </div>
+                          <hr>
+                          <center>
+                              <form action="#" method="post">
+                                  <table class="text" >
+                                      <tr>
+                                          <td> Rating(1-10):</td>
+                                          <td> <input class="input_field" type="number" name="rating"><input class="sub_2 submit"type="submit" value="SUBMIT" ></td>
+                                      </tr>
+                                  </table>
+                              </form>
+                          </center>
+
+                          <div><hr></div>
+                      </div>
+
+
+
+                  </div>
+              </div>
+          </div>
+
+          <div class="footer-area">
+              <div class="footer">
+                  <p class="cpt">&copy; Copyright -Your Personal Bookshelf- | Design by LabBaxMX</p>
+              </div>
+          </div>
+</body>
+</html>
